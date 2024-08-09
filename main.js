@@ -34,13 +34,18 @@ function playGame(playerChoice) {
 
   switch (result) {
     case "YOU WIN":
+        resultDisplay.classList.remove("greentext,redtext");
       resultDisplay.classList.add("greentext");
       playerScore++;
       playerScoreDisplay.textContent = playerScore;
       break;
     case "YOU LOSE":
+        resultDisplay.classList.remove("greentext,redtext");
       resultDisplay.classList.add("redtext");
       computerScore++;
       computerScoreDisplay.textContent = computerScore;
+      break;
+   
+      
   }
 }

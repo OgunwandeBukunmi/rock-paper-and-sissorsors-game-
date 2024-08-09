@@ -28,20 +28,23 @@ function playGame(playerChoice) {
   }
   computerDisplay.textContent = `PLAYER :${computerChoice}`;
   playerDisplay.textContent = `PLAYER :${playerChoice}`;
-  resultDisplay.classList.remove("greentext","redtext");
+  resultDisplay.classList.remove("greentext");
+    resultDisplay.classList.remove("redtext");
   resultDisplay.textContent = `${result}`;
 
  
 
   switch (result) {
     case "YOU WIN":
-        resultDisplay.classList.remove("greentext","redtext");
+        resultDisplay.classList.remove("greentext")
+          resultDisplay.classList.remove("redtext");
       resultDisplay.classList.add("greentext");
       playerScore++;
       playerScoreDisplay.textContent = playerScore;
       break;
     case "YOU LOSE":
-        resultDisplay.classList.remove("greentext","redtext");
+        resultDisplay.classList.remove("greentext")
+          resultDisplay.classList.remove("redtext");
       resultDisplay.classList.add("redtext");
       computerScore++;
       computerScoreDisplay.textContent = computerScore;
